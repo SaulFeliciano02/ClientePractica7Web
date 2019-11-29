@@ -1,16 +1,15 @@
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 
+import static spark.Spark.port;
+
 public class Main {
 
     public static void main(String[] args) {
-        HttpResponse<String> response = Unirest.get("http://localhost:4567/rest/estudiantes/")
-                .header("accept", "application/json")
-                .queryString("apiKey", "123")
-                .asString();
+        port(8081);
 
-                System.out.println(response.getBody());
-        }
+        new Rutas().manejoRutas();
 
     }
+}
 

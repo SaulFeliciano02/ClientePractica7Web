@@ -6,6 +6,26 @@ public class Estudiante {
     private String carrera;
 
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public Estudiante() {
+
+    }
+
     public Estudiante(String nombre, String matricula, String correo, String carrera) {
         this.nombre = nombre;
         this.matricula = matricula;
